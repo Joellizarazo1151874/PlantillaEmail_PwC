@@ -1,6 +1,6 @@
 # Plantilla de email para PwC Colombia
 
-¡Hola! Este repo contiene mi solución para la prueba técnica de PwC. Básicamente, he creado una plantilla de email HTML para su boletín informativo que funciona bien en la mayoría de clientes de correo.
+¡Hola! Este repo contiene mi solución para la prueba técnica de PwC. Básicamente, he creado una plantilla de email HTML para su boletín informativo.
 
 ## Sobre las imágenes
 Para que puedan ver la plantilla funcionando sin problemas, subí todas las imágenes a mi servidor temporal (https://smartpark.kesug.com/). Así pueden visualizar todo sin configuraciones extra.
