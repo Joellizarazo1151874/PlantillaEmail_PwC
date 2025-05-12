@@ -1,199 +1,309 @@
-<!DOCTYPE HTML>
-<html lang="es">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light">
   <meta name="supported-color-schemes" content="light">
   <title>PwC Colombia</title>
   <style>
-    /* Estilos base para compatibilidad con mayirua de ckientes email*/
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Raleway', sans-serif; color: #000; background-color: #ffffff; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-    .container { max-width: 600px; width: 100%; margin: 0 auto; padding: 0; }
-    .header, .footer { background-color: #d04a02; color: #ffffff; padding: 20px; text-align: center; }
-    .content { background-color: #f4f8ee; padding: 20px; }
-    .btn { display: inline-block; background: #daefb3; color: #0a0b0a; padding: 10px 20px; 
-           border-radius: 4px; text-decoration: none; font-weight: bold; }
-    .nav { display: flex; justify-content: center; padding: 10px; flex-wrap: wrap; }
-    .nav a { color: #ffffff; text-decoration: none; padding: 5px 15px; margin: 2px; }
-    .two-column { display: flex; flex-wrap: nowrap; justify-content: space-between; }
-    .column { flex: 1 1 45%; padding: 10px; }
-    img { max-width: 100%; height: auto; }
-    .social-icons { display: flex; justify-content: flex-start; gap: 10px; margin: 20px 0; }
-    .social-icons a { display: inline-block; }
-    .divider { border-top: 1px solid #BBBBBB; margin: 10px 0; }
+    /* Estilos base - Muchos serán ignorados por Gmail pero útiles para Apple Mail y algunos otros clientes */
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    body, table, td { font-family: 'Helvetica', Arial, sans-serif; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse !important; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
     
-    /* Botones */
-    .article-btn {
-      display: inline-block;
-      background-color: #ffffff;
-      color: #d04a02;
-      padding: 8px 18px;
-      border-radius: 20px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 15px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      border: 1px solid #d04a02;
-      transition: all 0.3s ease;
-    }
-    .article-btn:hover {
-      background-color: #d04a02;
-      color: #ffffff;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-    
-    /* Fix para móviles */
     @media screen and (max-width: 480px) {
-      .two-column { flex-wrap: wrap; }
-      .two-column .column { flex: 1 0 100%; }
-      .nav { flex-direction: row; justify-content: center; }
-      .nav a { margin: 3px; padding: 5px 8px; font-size: 13px; width: auto; }
-      .container { width: 100% !important; }
+      .mobile-hidden { display: none !important; }
+      .mobile-block { display: block !important; width: 100% !important; }
+      .mobile-center { text-align: center !important; }
+      .mobile-full-width { width: 100% !important; }
+      .mobile-padding { padding: 10px 5% !important; }
       h2 { font-size: 22px !important; }
       h3 { font-size: 18px !important; }
       p { font-size: 14px !important; line-height: 1.4 !important; }
-      .btn { display: block; margin: 15px auto !important; max-width: 200px; }
-    }
-    
-    /* Tablets y pantallas medianas */
-    @media screen and (max-width: 630px) {
-      [style*="font-size: 280px"] { font-size: 140px !important; letter-spacing: -5px !important; }
-      [style*="font-size: 130px"] { font-size: 80px !important; letter-spacing: -1px !important; margin-top: 35px !important; }
-    }
-    
-    @media screen and (max-width: 320px) {
-      .colombia-text { margin-top: 0; }
     }
   </style>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Montserrat:400,700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <div class="container">
-    <!-- Header + Nav -->
-    <div class="header">
-      <img src="https://smartpark.kesug.com/img/pwclogo.png" alt="Logo" style="width: 100px; height: auto;">
-      <!-- título del boletin-->
-      <h1 style="margin: 15px 0; font-size: 28px; font-weight: bold;">Boletín Informativo</h1>
-      <div class="divider"></div>
-      <nav class="nav">
-        <a href="https://www.pwc.com/co/es">Inicio</a>
-        <a href="https://www.pwc.com/co/es/servicios">Servicios</a>
-        <a href="https://www.pwc.com/co/es/acerca-de-nosotros">Nosotros</a>
-        <a href="https://www.pwc.com/co/es/acerca-de-nosotros/nuestras-oficinas">Contacto</a>
-      </nav>
-      <div class="divider"></div>
-    </div>
-    
-    <!-- Banner principal -->
-    <div style="background-color: #d04a02; color: #ffffff; padding: 0 20px 20px; text-align: center; position: relative; overflow: hidden;">
-      <!-- Efecto marca de agua - intenté con SVG pero no funcionaba bien en todos los clientes -->
-      <div style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); width: 98%; z-index: 1; text-align: center;">
-        <div style="font-size: 280px; font-weight: bold; opacity: 0.3; color: #ffffff; font-family: 'Raleway', sans-serif; letter-spacing: -10px; text-transform: lowercase; line-height: 0.8;">pwc</div>
-        <div style="font-size: 130px; font-weight: bold; opacity: 0.25; color: #ffffff; font-family: 'Raleway', sans-serif; letter-spacing: -2px; text-transform: lowercase; line-height: 1; margin-top: 70px;">colombia</div>
-      </div>
+<body style="margin: 0; padding: 0; background-color: #F4F4F4; font-family: 'Helvetica', Arial, sans-serif; color: #000000;">
+
+<!-- Contenedor principal -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; margin: 0 auto;">
+  <tr>
+    <td align="center" valign="top">
       
-      <img src="https://smartpark.kesug.com/img/banner.png" alt="imagen de banner" style="margin: 0 0 20px; width: 60%; max-width: 450px; height: auto; position: relative; z-index: 2;">
+      <!-- HEADER -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#d04a02" style="background-color: #d04a02;">
+        <tr>
+          <td align="center" style="padding: 20px;">
+            <img src="https://smartpark.kesug.com/img/pwclogo.png" alt="Logo" width="100" height="auto" style="border: 0; display: block; margin: 0 auto;">
+            <h1 style="color: #ffffff; margin: 15px 0; font-size: 28px; font-weight: bold;">Boletín Informativo</h1>
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td height="1" bgcolor="#ffffff" style="opacity: 0.3;"></td>
+              </tr>
+            </table>
+            
+            <!-- Navegación -->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 10px 0;">
+              <tr>
+                <td align="center">
+                  <table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+                    <tr>
+                      <td style="padding: 5px 10px;">
+                        <a href="https://www.pwc.com/co/es" style="color: #ffffff; text-decoration: none; font-size: 14px;">Inicio</a>
+                      </td>
+                      <td style="padding: 5px 10px;">
+                        <a href="https://www.pwc.com/co/es/servicios" style="color: #ffffff; text-decoration: none; font-size: 14px;">Servicios</a>
+                      </td>
+                      <td style="padding: 5px 10px;">
+                        <a href="https://www.pwc.com/co/es/acerca-de-nosotros" style="color: #ffffff; text-decoration: none; font-size: 14px;">Nosotros</a>
+                      </td>
+                      <td style="padding: 5px 10px;">
+                        <a href="https://www.pwc.com/co/es/acerca-de-nosotros/nuestras-oficinas" style="color: #ffffff; text-decoration: none; font-size: 14px;">Contacto</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td height="1" bgcolor="#ffffff" style="opacity: 0.3;"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
       
-      <!-- puse mi nombre para hacer pruebas-->
-      <p style="position: relative; z-index: 2; font-size: 18px; font-weight: bold; margin-bottom: 15px;">Estimado JOEL LIZARAZO,</p>
+      <!-- BANNER PRINCIPAL -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#d04a02" style="background-color: #d04a02;">
+        <tr>
+          <td align="center" style="padding: 0 20px 20px; color: #ffffff;">
+            <!-- Simplificamos eliminando efectos marca de agua para mejor compatibilidad -->
+            <img src="https://smartpark.kesug.com/img/banner.png" alt="imagen de banner" width="60%" style="max-width: 450px; border: 0; display: block; margin: 0 auto 20px;">
+            
+            <p style="font-size: 18px; font-weight: bold; margin-bottom: 15px; text-align: center;">Estimado JOEL LIZARAZO,</p>
+            
+            <p style="text-align: center;">Es un placer compartir con usted nuestro boletín mensual, donde encontrará las últimas novedades, tendencias e información relevante sobre el mundo empresarial y financiero. En PwC Colombia, estamos comprometidos con brindarle el conocimiento necesario para impulsar su negocio hacia el éxito.</p>
+            
+            <table border="0" cellpadding="0" cellspacing="0" style="margin: 20px auto;">
+              <tr>
+                <td bgcolor="#daefb3" style="padding: 10px 20px; border-radius: 4px;">
+                  <a href="https://www.pwc.com/co/es/publicaciones" style="color: #0a0b0a; text-decoration: none; font-weight: bold;">Saber más</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
       
-      <p style="position: relative; z-index: 2;">Es un placer compartir con usted nuestro boletín mensual, donde encontrará las últimas novedades, tendencias e información relevante sobre el mundo empresarial y financiero. En PwC Colombia, estamos comprometidos con brindarle el conocimiento necesario para impulsar su negocio hacia el éxito.
-      </p>
-      <a href="https://www.pwc.com/co/es/publicaciones" class="btn" style="margin: 20px 0; position: relative; z-index: 2;">Saber más</a>
-    </div>
-    
-    <!-- Artículos - esto lo hice para que funcione bien en Gmail -->
-    <div class="content">
-      <h2 style="text-align: center; margin-bottom: 20px;">Artículos Destacados</h2>
-      <div class="two-column">
-        <div class="column">
-          <div style="position: relative; margin-bottom: 15px;">
-            <!-- Este truco lo aprendí de un tutorial de Litmus -->
-            <div style="position: absolute; top: 10px; left: -5px; width: 100%; height: 70%; background-color: #d04a02; opacity: 0.2; z-index: 1;"></div>
-            <img src="https://smartpark.kesug.com/img/noticia1.png" alt="Imagen Artículo 1" style="position: relative; z-index: 2;">
-          </div>
-          <h3 style="margin: 15px 0 10px;"><strong>Los 5 principios para potenciar su negocio</strong></h3>
-          <p>Descubra los principios fundamentales que están transformando el panorama empresarial actual. Nuestros expertos analizan las tendencias que ayudarán a su organización a mantenerse competitiva en un entorno cambiante.</p>
-          <p style="margin-top: 10px;"><a href="https://www.pwc.com/co/es" class="article-btn"><strong>Leer más</strong></a></p>
-        </div>
-        <div class="column">
-          <div style="position: relative; margin-bottom: 15px;">
-            <div style="position: absolute; top: 10px; right: -5px; width: 100%; height: 70%; background-color: #888888; opacity: 0.2; z-index: 1;"></div>
-            <img src="https://smartpark.kesug.com/img/noticia2.png" alt="Imagen Artículo 2" style="position: relative; z-index: 2;">
-          </div>
-          <h3 style="margin: 15px 0 10px;"><strong>Beneficios de la transformación digital</strong></h3>
-          <p>La transformación digital ya no es una opción, sino una necesidad. Conozca cómo implementar estrategias digitales efectivas puede mejorar la eficiencia operativa y crear nuevas oportunidades de crecimiento para su empresa.</p>
-          <p style="margin-top: 10px;"><a href="https://www.pwc.com/co/es" class="article-btn"><strong>Leer más</strong></a></p>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Sección Webinar -->
-    <div style="background-color: #d04a02; color: #ffffff; padding: 30px 20px; text-align: center; position: relative; overflow: hidden;">
-      <div style="position: absolute; top: 20px; right: 30px; width: 50%; height: 60%; background-color: #daefb3; opacity: 0.15; z-index: 1; transform: rotate(-5deg);"></div>
-      <div style="position: absolute; bottom: 20px; left: 30px; width: 50%; height: 40%; background-color: #ffffff; opacity: 0.1; z-index: 1; transform: rotate(5deg);"></div>
+      <!-- ARTICULOS DESTACADOS -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#f4f8ee" style="background-color: #f4f8ee;">
+        <tr>
+          <td style="padding: 20px;">
+            <h2 style="text-align: center; margin-bottom: 20px;">Artículos Destacados</h2>
+            
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <!-- Columna 1 -->
+                <td valign="top" width="48%" class="mobile-full-width" style="padding-right: 2%;">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td>
+                        <img src="https://smartpark.kesug.com/img/noticia1.png" alt="Imagen Artículo 1" width="100%" style="border: 0; display: block;">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 15px 0 10px;">
+                        <h3 style="margin: 0;"><strong>Los 5 principios para potenciar su negocio</strong></h3>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p style="margin: 0;">Descubra los principios fundamentales que están transformando el panorama empresarial actual. Nuestros expertos analizan las tendencias que ayudarán a su organización a mantenerse competitiva en un entorno cambiante.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 10px 0;">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td bgcolor="#ffffff" style="padding: 8px 18px; border: 1px solid #d04a02; border-radius: 20px;">
+                              <a href="https://www.pwc.com/co/es" style="color: #d04a02; text-decoration: none; font-weight: bold;">Leer más</a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                
+                <!-- Separador mobile -->
+                <td width="4%" class="mobile-hidden">&nbsp;</td>
+                
+                <!-- Columna 2 -->
+                <td valign="top" width="48%" class="mobile-full-width" style="padding-left: 2%;">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td>
+                        <img src="https://smartpark.kesug.com/img/noticia2.png" alt="Imagen Artículo 2" width="100%" style="border: 0; display: block;">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 15px 0 10px;">
+                        <h3 style="margin: 0;"><strong>Beneficios de la transformación digital</strong></h3>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p style="margin: 0;">La transformación digital ya no es una opción, sino una necesidad. Conozca cómo implementar estrategias digitales efectivas puede mejorar la eficiencia operativa y crear nuevas oportunidades de crecimiento para su empresa.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 10px 0;">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td bgcolor="#ffffff" style="padding: 8px 18px; border: 1px solid #d04a02; border-radius: 20px;">
+                              <a href="https://www.pwc.com/co/es" style="color: #d04a02; text-decoration: none; font-weight: bold;">Leer más</a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
       
-      <h2 style="margin-bottom: 20px; position: relative; z-index: 2; font-size: 24px;">Próximos eventos de PwC Colombia</h2>
+      <!-- WEBINAR -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#d04a02" style="background-color: #d04a02; color: #ffffff;">
+        <tr>
+          <td align="center" style="padding: 30px 20px;">
+            <h2 style="margin-bottom: 20px; font-size: 24px;">Próximos eventos de PwC Colombia</h2>
+            
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 500px; margin: 0 auto;">
+              <tr>
+                <td align="center" bgcolor="#e05a12" style="padding: 20px; border-radius: 10px;">
+                  <h3 style="font-size: 18px; margin-bottom: 10px; text-align: center;">Webinar: "Transformación Digital para Empresas Colombianas"</h3>
+                  <p style="margin-bottom: 15px; font-size: 14px; text-align: center;">Descubra estrategias prácticas para implementar la transformación digital en su organización en el contexto específico del mercado colombiano.</p>
+                  
+                  <table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+                    <tr>
+                      <td align="center" bgcolor="#daefb3" style="padding: 10px 20px; border-radius: 4px;">
+                        <a href="https://login.pwc.com/identity/register?goto=https:%2F%2Fwww.pwc.com%2Fco%2Fes" style="color: #0a0b0a; text-decoration: none; font-weight: bold;">Registrarse ahora</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            
+            <p style="margin-top: 15px; font-size: 14px;">
+              <a href="https://www.pwc.com/co/es" style="color: #ffffff; text-decoration: underline;">Ver todos los eventos</a>
+            </p>
+          </td>
+        </tr>
+      </table>
       
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 0 auto; max-width: 500px; position: relative; z-index: 2;">
-        <div style="flex: 1 1 100%; background-color: rgba(255,255,255,0.1); border-radius: 10px; padding: 20px; margin-bottom: 15px;">
-          <h3 style="font-size: 18px; margin-bottom: 10px;">Webinar: "Transformación Digital para Empresas Colombianas"</h3>
-          <p style="margin-bottom: 15px; font-size: 14px;">Descubra estrategias prácticas para implementar la transformación digital en su organización en el contexto específico del mercado colombiano.</p>
-          <a href="https://login.pwc.com/identity/register?goto=https:%2F%2Fwww.pwc.com%2Fco%2Fes" class="btn" style="position: relative; z-index: 2;">Registrarse ahora</a>
-        </div>
-      </div>
+      <!-- CONTACTO / REDES -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#d04a02" style="background-color: #d04a02; color: #ffffff;">
+        <tr>
+          <td align="center" style="padding: 20px;">
+            <p style="margin: 10px 0; text-align: center;">
+              ¿Tiene preguntas o desea más información sobre nuestros servicios?<br>
+              <a href="https://www.pwc.com/co/es/" style="color: #daefb3; font-weight: bold;">Contáctenos</a> o visite <a href="https://www.pwc.com/co/es" style="color: #daefb3; font-weight: bold;">www.pwc.com/co</a>
+            </p>
+            
+            <!-- Iconos de redes sociales -->
+            <table border="0" cellpadding="0" cellspacing="0" style="margin: 20px auto;">
+              <tr>
+                <td style="padding: 0 7px;">
+                  <a href="https://www.facebook.com/PwCColombia">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background-color: #ffffff; border-radius: 50%;">
+                      <tr>
+                        <td align="center" valign="middle" width="36" height="36">
+                          <img src="https://smartpark.kesug.com/img/redes/follow_facebook.gif" alt="Facebook" width="20" height="20" style="display: block; border: 0;">
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                </td>
+                <td style="padding: 0 7px;">
+                  <a href="https://www.linkedin.com/company/pwc-colombia">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background-color: #ffffff; border-radius: 50%;">
+                      <tr>
+                        <td align="center" valign="middle" width="36" height="36">
+                          <img src="https://smartpark.kesug.com/img/redes/follow_linkedin.png" alt="LinkedIn" width="20" height="20" style="display: block; border: 0;">
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                </td>
+                <td style="padding: 0 7px;">
+                  <a href="https://twitter.com/PwC_Colombia">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background-color: #ffffff; border-radius: 50%;">
+                      <tr>
+                        <td align="center" valign="middle" width="36" height="36">
+                          <img src="https://smartpark.kesug.com/img/redes/follow_twitter.png" alt="Twitter" width="20" height="20" style="display: block; border: 0;">
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                </td>
+                <td style="padding: 0 7px;">
+                  <a href="https://www.instagram.com/pwc_colombia">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background-color: #ffffff; border-radius: 50%;">
+                      <tr>
+                        <td align="center" valign="middle" width="36" height="36">
+                          <img src="https://smartpark.kesug.com/img/redes/follow_instagram.png" alt="Instagram" width="20" height="20" style="display: block; border: 0;">
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                </td>
+              </tr>
+            </table>
+            
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td height="1" bgcolor="#ffffff" style="opacity: 0.2;"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
       
-      <p style="margin-top: 5px; font-size: 14px; position: relative; z-index: 2;">
-        <a href="https://www.pwc.com/co/es" style="color: #ffffff; text-decoration: underline;">Ver todos los eventos</a>
-      </p>
-    </div>
-    
-    <!-- Contacto / Redes -->
-    <div style="background-color: #d04a02; color: #ffffff; padding: 20px; position: relative;">
-      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: repeating-linear-gradient(45deg, rgba(255,255,255,0.05), rgba(255,255,255,0.05) 10px, transparent 10px, transparent 20px); z-index: 1;"></div>
+      <!-- FOOTER -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#d04a02" style="background-color: #d04a02; color: #ffffff;">
+        <tr>
+          <td style="padding: 30px 20px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td align="left" valign="top" width="70%" class="mobile-full-width mobile-center">
+                  <p style="margin-bottom: 15px; font-size: 14px;">© 2025 PwC. Todos los derechos reservados.</p>
+                  <p style="font-size: 12px; opacity: 0.8;">
+                    <a href="https://www.pwc.com/co/es" style="color: #ffffff; margin-right: 15px; text-decoration: none;">CANCELAR SUSCRIPCIÓN</a> | 
+                    <a href="https://www.pwc.com/co/es/privacidad.html" style="color: #ffffff; margin: 0 15px; text-decoration: none;">POLÍTICA DE PRIVACIDAD</a> | 
+                    <a href="https://www.pwc.com/co/es" style="color: #ffffff; margin-left: 15px; text-decoration: none;">SITIO WEB</a>
+                  </p>
+                </td>
+                <td align="right" valign="top" width="30%" class="mobile-full-width mobile-center">
+                  <img src="https://smartpark.kesug.com/img/pwclogo.png" alt="PwC Logo" width="80" height="auto" style="border: 0;">
+                  <p style="font-size: 12px; margin-top: 10px;">PwC Colombia</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
       
-      <p style="margin: 10px 0; position: relative; z-index: 2; text-align: center;">
-        ¿Tiene preguntas o desea más información sobre nuestros servicios?<br>
-        <a href="https://www.pwc.com/co/es/" style="color: #daefb3; font-weight: bold;">Contáctenos</a> o visite <a href="https://www.pwc.com/co/es" style="color: #daefb3; font-weight: bold;">www.pwc.com/co</a>
-      </p>
-      
-      <!-- No tuve tiempo para hacer un sprite, así que usé imágenes individuales -->
-      <div style="display: flex; justify-content: center; gap: 15px; margin: 20px 0; position: relative; z-index: 2;">
-        <a href="https://www.facebook.com/PwCColombia" style="display: inline-block; background-color: #ffffff; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-          <img src="https://smartpark.kesug.com/img/redes/follow_facebook.gif" alt="Facebook" width="20" height="20">
-        </a>
-        <a href="https://www.linkedin.com/company/pwc-colombia" style="display: inline-block; background-color: #ffffff; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-          <img src="https://smartpark.kesug.com/img/redes/follow_linkedin.png" alt="LinkedIn" width="20" height="20">
-        </a>
-        <a href="https://twitter.com/PwC_Colombia" style="display: inline-block; background-color: #ffffff; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-          <img src="https://smartpark.kesug.com/img/redes/follow_twitter.png" alt="Twitter" width="20" height="20">
-        </a>
-        <a href="https://www.instagram.com/pwc_colombia" style="display: inline-block; background-color: #ffffff; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-          <img src="https://smartpark.kesug.com/img/redes/follow_instagram.png" alt="Instagram" width="20" height="20">
-        </a>
-      </div>
-      
-      <div class="divider" style="position: relative; z-index: 2; border-color: rgba(255,255,255,0.2);"></div>
-    </div>
-    
-    <!-- Footer -->
-    <div class="footer" style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 30px 20px;">
-      <div style="flex: 2; text-align: left;">
-        <p style="margin-bottom: 15px; font-size: 14px;">© 2025 PwC. Todos los derechos reservados.</p>
-        <p style="font-size: 12px; opacity: 0.8;">
-          <a href="https://www.pwc.com/co/es" style="color: #ffffff; margin-right: 15px; text-decoration: none;">CANCELAR SUSCRIPCIÓN</a> | 
-          <a href="https://www.pwc.com/co/es/privacidad.html" style="color: #ffffff; margin: 0 15px; text-decoration: none;">POLÍTICA DE PRIVACIDAD</a> | 
-          <a href="https://www.pwc.com/co/es" style="color: #ffffff; margin-left: 15px; text-decoration: none;">SITIO WEB</a>
-        </p>
-      </div>
-      <div style="flex: 1; text-align: right;">
-        <img src="https://smartpark.kesug.com/img/pwclogo.png" alt="PwC Logo" style="width: 80px; height: auto;">
-        <p style="font-size: 12px; margin-top: 10px;">PwC Colombia</p>
-      </div>
-    </div>
-  </div>
+    </td>
+  </tr>
+</table>
+
 </body>
 </html>
